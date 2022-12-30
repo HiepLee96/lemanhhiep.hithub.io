@@ -698,6 +698,65 @@ BLOGS SECTION AREA
 
 /*
 ============================================================================
+SEARCH RESULT AREA
+============================================================================
+*/
+.search-result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: var(--border);
+    width: 100%;
+}
+
+.search-result h1 {
+    font-size: 2rem;
+}
+
+.search-result .results {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    gap: 4%;
+}
+
+.search-result .results .box {
+    max-width: 20rem;
+    position: relative;
+}
+
+.search-result .results .box img {
+    width: 100%;
+}
+
+.search-result .results .box .content {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+.search-result .results .box .content .price {
+    color: red;
+}
+
+.search-result .results .box .content .price span {
+    color: var(--black);
+    text-decoration: line-through;
+}
+
+.search-result .results .box .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-result .results .box .button a {
+    margin: 0 auto;
+}
+
+
+
+
+/*
+============================================================================
 FOOTER AREA
 ============================================================================
 */
@@ -863,10 +922,35 @@ MEDIA QUERIES
         margin-left: 0;
         width: 100%;
     }
+
+    .search-result .results {
+        grid-template-columns: 30% 30% 30%;
+        gap: 3rem;
+    }
+
+    .search-result .results .box .content {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 28.125em) {/*450px*/
     html {
         font-size: 50%;
+    }
+
+    .bottom-navbar {
+        display: block;
+    }
+
+
+    .search-result .results {
+        grid-template-columns: 40% 40%;
+        justify-content: space-between;
+    }
+
+    .search-result .results .box .content {
+        padding: 10px;
+        font-size: 1.0rem;
     }
 }
