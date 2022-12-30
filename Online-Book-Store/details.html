@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookly: Free delivery worldwide on over 20 milion books</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-1">
+            <a href="#home" class="logo"><img src="./assets/image/logo3.png" alt=""></a>
+            <form action="" class="search-form">
+                <input type="search" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#home" >home</a>
+                <a href="#featured">featured</a>
+                <a href="#arrivals">arrivals</a>
+                <a href="#reviews">reviews</a>
+                <a href="#blogs">blog</a>
+            </nav>
+        </div>
+
+        <!--BOTTOM NAVBAR starts-->
+        <nav class="bottom-navbar">
+            <a href="#home" class="fas fa-home"></a>
+            <a href="#featured" class="fas fa-list"></a>
+            <a href="#arrivals" class="fas fa-tags"></a>
+            <a href="#reviews" class="fas fa-comments"></a>
+            <a href="#blogs" class="fa-solid fa-blog"></a>
+        </nav>
+        <!--BOTTOM NAVBAR ends-->
+    </header>
+
+    <main>
+            <!--LOGIN FORM starts-->
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <form action="LoginServlet" method="GET" name="login-form" onsubmit="return(isLoginFormEmpty());">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="input-box" id="username" placeholder=" enter your email" name="username">
+            <p id="errUserName"></p>
+            <span>password</span>
+            <input type="password" class="input-box" id="password" placeholder=" enter your password" name="password">
+            <p id="errPassword"></p>
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" id="submit-btn">
+            <p>forget password? <a href="#">click here</a> </p>
+            <p>don't have an account <a href="#">create one</a> </p>
+        </form>
+    </div>
+    <!--LOGIN FORM ends-->
+
+    <section class="detail-container">
+        <div class="col-1">
+            <img src="./assets/image/book-5.png" alt="">
+        </div>
+        <div class="col-2">
+            <h1 class="books-name">Victory City</h1>
+            <h4 class="author">Salman Rushdie <span>(Author)</span></h4>
+            <p>FORMAT</p>
+            <div class="box">
+                <p class="book-type">Hardcover</p>
+                <div class="book-price">
+                    <p class="price">$30.00 <span>$27.90</span></p>
+                </div>
+            </div>
+            <p><span>PRE-ORDER </span> SHIPS FEB 07, 2023</p>
+            <div class="orders-buttons">
+                <a href="#" class="btn">PRE-ORDER</a>
+                <a href="#" class="btn">ADD TO WISHLIST</a>
+            </div>
+            <p class="get-audio-book">GET THE AUDIO BOOK</p>
+            <div class="description-area">
+                <h2>Description</h2>
+                <p class="content">
+                The epic tale of a woman who breathes a fantastical empire into existence, only to be consumed by it over the centuries--from the transcendent imagination of Booker Prize-winning, internationally bestselling author Salman Rushdie
+"A major accomplishment by one of our greatest living writers . . . It does not resemble any other novel I could name."--Michael Cunningham, Pulitzer Prize-winning author of The Hours
+In the wake of an unimportant battle between two long-forgotten kingdoms in fourteenth-century southern India, a nine-year-old girl has a divine encounter that will change the course of history. After witnessing the death of her mother, the grief-stricken Pampa Kampana becomes a vessel for her namesake, the goddess Pampa, who begins to speak out of the girl's mouth. Granting her powers beyond Pampa Kampana's comprehension, the goddess tells her that she will be instrumental in the rise of a great city called Bisnaga--"victory city"--the wonder of the world.
+                </p>
+            </div>
+            <div class="product-details">
+                <div class="col-1">
+                    <p>Price</p>
+                    <p>Publisher</p>
+                    <p>Publish Date</p>
+                    <p>Pages</p>
+                    <p>Language</p>
+                    <p>Type</p>
+                </div>
+                <div class="col-2">
+                    <p class="price">$30.00 <span>$27.90</span></p>
+                    <p>Random House</p>
+                    <p>February 07, 2023</p>
+                    <p>352</p>
+                    <p>English</p>
+                    <p>Hardcover</p>
+                </div>
+            </div>
+            <div class="about-the-author">
+                <h2>About the Author</h2>
+                <p class="content">
+                    Salman Rushdie is the author of fourteen previous novels, including Midnight's Children (for which he won the Booker Prize and the Best of the Booker), Shame, The Satanic Verses, The Moor's Last Sigh, and Quichotte, all of which have been shortlisted for the Booker Prize; a collection of stories, East, West; a memoir, Joseph Anton; a work of reportage, The Jaguar Smile; and three collections of essays, most recently Languages of Truth. His many awards include the Whitbread Prize for Best Novel, which he won twice; the PEN/Allen Foundation Literary Service Award; the National Arts Award; the French Prix du Meilleur Livre Étranger; the European Union's Aristeion Prize for Literature; the Budapest Grand Prize for Literature; and the Italian Premio Grinzane Cavour. He is a member of the American Academy of Arts and Letters and a fellow of the American Academy of Arts and Sciences, and he is a Distinguished Writer in Residence at New York University. He is a former president of PEN America. His books have been translated into over forty languages.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--FEATURED SECTION starts-->
+    <section class="featured" id="featured">
+        <h1 class="heading"><span>featured books</span></h1>
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-4.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-5.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-6.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-7.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-8.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-9.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/image/book-10.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!--FEATURED SECTION ends-->
+
+    <!-- NEWSLETTER SECTION starts -->
+    <section class="newsletter">
+        <form action="">
+            <h3>subscribe for lastest updates</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="input-box">
+            <input type="submit" value="subscribe" class="btn">
+        </form>
+    </section>
+    <!-- NEWSLETTER SECTION ends -->
+
+   
+
+
+
+
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>our locations</h3>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> india </a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> USA </a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> russia </a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> france </a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> japan </a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> africa </a>
+            </div>
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i> account info </a>
+                <a href="#"><i class="fas fa-arrow-right"></i> ordered items </a>
+                <a href="#"><i class="fas fa-arrow-right"></i> privacy </a>
+                <a href="#"><i class="fas fa-arrow-right"></i> payment method</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> our services </a>
+            </div>
+            <div class="box">
+                <h3>contact information</h3>
+                <a href="#"><i class="fas fa-phone"></i> +123-456-789</a>
+                <a href="#"><i class="fas fa-phone"></i> +111-222-333</a>
+                <a href="#"><i class="fas fa-envelope"></i> lemanhhiep@gmail.com</a>
+                <img src="./assets/image/worldmap.png" class="map" alt="">
+            </div>
+        </div>
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="credit">created by <span>web designers</span> | all rights reserved!</div>
+    </footer>
+
+    <!-- LOADER -->
+    <!--
+    <div class="loader-container">
+        <img src="./assets/image/loader-img.gif" alt="">
+    </div>
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
