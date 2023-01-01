@@ -852,6 +852,113 @@ LOADER AREA
 
 /*
 ============================================================================
+BOOK DETAIL AREA
+============================================================================
+*/
+.detail-container {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    column-gap: 10px;
+}
+
+.detail-container .col-1 img {
+    width: 100%;
+}
+
+.detail-container .col-2 .books-name {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.detail-container .col-2 .author {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.detail-container .col-2 p {
+    font-size: 1.4rem;
+}
+
+.detail-container .col-2 .box {
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    width: 30%;
+    background-color: #f6f6f8;
+    padding-inline: 20px;
+    margin-bottom: 15px;
+
+}
+
+.detail-container .col-2 .box > p {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.detail-container .col-2 .box .book-price {
+    margin-bottom: 10px;
+}
+
+.detail-container .col-2 .box .book-price p:first-child {
+    display: inline;
+    font-size: 1.8rem;
+    color: red;
+    text-decoration: line-through;
+}
+
+.detail-container .col-2 .box .book-price p:last-child {
+    display: inline;
+    font-size: 1.8rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.detail-container .col-2 > p > span {
+    color: var(--green);
+}
+
+.detail-container .col-2 .get-audio-book {
+    text-decoration: underline;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.detail-container .col-2 .description-area h2 {
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+.detail-container .col-2 .product-detail-h2 {
+    font-size: 2.5rem;
+    padding-top: 10px;
+}
+
+.detail-container .col-2 .product-details {
+    display: grid;
+    grid-template-columns: 25% 25%;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-container .col-2 .product-details .col-1 p {
+    text-align: right;
+}
+
+.detail-container .col-2 .product-details p {
+    font-size: 1.6rem;
+}
+
+.detail-container .col-2 .about-the-author h2  {
+    font-size: 2.5rem;
+    padding-top: 10px;
+}
+
+
+
+
+/*
+============================================================================
 MEDIA QUERIES
 ============================================================================
 */
@@ -931,6 +1038,14 @@ MEDIA QUERIES
     .search-result .results .box .content {
         padding: 15px;
         font-size: 1.2rem;
+    }
+
+    .detail-container {
+        display: block;
+    }
+
+    .detail-container .col-2 .box {
+        width: 100%;
     }
 }
 
