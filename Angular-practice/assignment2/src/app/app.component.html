@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Add a input field which update a propertyy username via Two-Way-Binding</li>
+        <li>Out put the username property via String Interposition</li>
+        <li>Add a button which may only be clickable if the username is NOT an empty string</li>
+        <li>Upon clicking the button, the username should be reset to an empty string</li>
+      </ol>
+      <hr>
+      <label >Username</label>
+      <input type="text" class="form-control" [(ngModel)]="userName">
+      <p>{{ userName }}</p>
+      <button class="btn btn-success"
+          [disabled]="isUserNameEmpty()"
+          (click)="clearTheUsername()">Reset the userName</button>
+    </div>
+  </div>
+</div>
